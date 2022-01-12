@@ -1,0 +1,115 @@
+I"<p><br />
+기술면접을 보다보면 열에 아홉은 꼭 나오는 주제들이 있습니다.</p>
+
+<p>이 주제도 그동안 면접을 보면서 직접적으로나 간접적으로 자주 마주친 주제 중 하나입니다.</p>
+
+<p><br /></p>
+
+<blockquote>
+  <h3 id="목차">목차</h3>
+  <ul>
+    <li><a href="#프로세스-vs-스레드">프로세스 vs 스레드</a>
+      <ul>
+        <li><a href="#프로세스">프로세스</a></li>
+        <li><a href="#스레드">스레드</a></li>
+      </ul>
+    </li>
+    <li><a href="#멀티프로세스-vs-멀티스레드">멀티프로세스 vs 멀티스레드</a>
+      <ul>
+        <li><a href="#멀티프로세스">멀티프로세스</a></li>
+        <li><a href="#멀티스레드">멀티스레드</a></li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><br />
+<br /></p>
+<h3 id="프로세스-vs-스레드">프로세스 vs 스레드</h3>
+
+<hr />
+
+<p><br /></p>
+
+<h4 id="프로세스">프로세스</h4>
+
+<p><img src="https://drive.google.com/file/d/1vNJYzkQ9jaJE8ugvbrLuCkCuU-wcYqUJ/view?usp=sharing" alt="프로세스" /></p>
+
+<ul>
+  <li>프로그램이 실행되어 운영체제에게 자원을 할당받은 작업의 단위</li>
+  <li>각 프로세스는 독립적인 주소공간을 할당 받기 때문에 서로의 자원에 직접 접근할 수 없고, 접근하기 위해서는 IPC(inter-process communication)를 사용해야 한다.</li>
+  <li>프로세스는 최소 1개 이상의 스레드를 가지고 있다. (첫 번째 스레드를 메인스레드라 부른다.)</li>
+</ul>
+
+<h4 id="스레드">스레드</h4>
+
+<p><img src="https://drive.google.com/file/d/1VaJ2aHE9koAZYGXNykLqfK1FVru3wTBu/view?usp=sharing" alt="스레드" /></p>
+
+<ul>
+  <li>한 작업(프로세스) 내에서 실행되는 여러 흐름의 단위</li>
+  <li>즉, 스레드는 프로세스에 포함되어 있다.</li>
+  <li>스레드는 Stack영역을 제외한 프로세스의 자원을 공유한다.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="멀티프로세스-vs-멀티스레드">멀티프로세스 vs 멀티스레드</h3>
+<hr />
+
+<p><br /></p>
+
+<p>우리가 흔히 컴퓨터를 사용할 때를 생각해보면 한가지의 프로그램만 사용하지는 않습니다. YouTube로 Lofi 음악도 틀어놓고, VS code로 코딩을 하면서, Slack이나 Discord로 간간히 메세지도 보내죠! 이 모든 프로그램이 동시에 돌아가고 있는 것 같지만 사실 컴퓨터는 한번에 한가지의 일만 처리할 수 있습니다. 그렇다면 우리는 어떻게 동시에 여러 프로그램을 사용할 수 있는걸까요?</p>
+
+<p>바로 <strong>*Context Switching</strong>을 통해 여러개의 프로세스를 우리가 느끼지 못할 찰나의 시간 안에 지속적으로 바꿔가며 처리를 하기 때문에 동시에 사용하고 있는 것처럼 느껴지게 만들기 때문입니다.</p>
+
+<p><br /></p>
+
+<blockquote>
+  <p><strong>*Context Switching 이란?</strong> : CPU가 여러 프로세스를 처리할 때, 현재 프로세스의 상태(Context)를 해당 프로세서의 PCB(Process Control Block)에 저장하고, 대기중이던 다음 프로세스의 상태(Context)를 불러오는 과정</p>
+</blockquote>
+
+<p><br /></p>
+
+<p>하나의 컴퓨터 안에서 여러개의 프로그램이 동시에 돌아가기도 하지만, 더 자세히 들여다 보면 하나의 프로그램 안에서 여러개의 작업이 동시에 처리되어야 하는 경우도 많습니다. 그런 경우에 <strong>멀티프로세스</strong>나 <strong>멀티스레드</strong>를 이용하는데 두가지의 차이점에 대해서 알아보도록 하겠습니다.</p>
+
+<h4 id="멀티프로세스">멀티프로세스</h4>
+<ul>
+  <li>하나의 프로그램을 여러개의 <strong>프로세스</strong>로 구성하여 동시에 여러개의 작업을 수행하는 방식</li>
+</ul>
+
+<blockquote>
+  <p><strong>장점</strong></p>
+  <ul>
+    <li><strong>안전성이 높다</strong>: 하나의 자식 프로세스에서 문제가 발생하더라도, 프로세스는 서로 독립되어 있기 때문에 다른 작업들에는 영향을 끼치지 않는다.</li>
+  </ul>
+</blockquote>
+
+<p><strong>단점</strong></p>
+<ul>
+  <li><strong>Context Switching에서의 오버헤드</strong>: 프로세스간의 Context Switching 과정에서는 정보를 저장하고 불러오는 것과 더불어 캐쉬 메모리까지 초기화 해야하기 때문에 오버헤드가 발생한다.</li>
+  <li>자원 공유 과정의 오버헤드: 스레드와는 달리 각각의 프로세스는 독립된 메모리 공간을 가지기 때문에 전역변수 등 자원의 공유가 필요할 때에 IPC와 같은 복잡한 통신방법으로 인해 오버헤드가 발생한다.</li>
+</ul>
+
+<h4 id="멀티스레드">멀티스레드</h4>
+<ul>
+  <li>하나의 프로그램을 여러개의 <strong>스레드</strong>로 구성하여 동시에 여러개의 작업을 수행하는 방식
+    <blockquote>
+      <p><strong>장점</strong></p>
+    </blockquote>
+    <ul>
+      <li>시스템 자원 소모 감소:</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<h3 id="references">References</h3>
+
+<blockquote>
+  <p><a href="https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html">권희정 (2018, Sep 14). 프로세스와 스레드의 차이. Heee’s Development Blog.</a><br />
+<a href="https://brunch.co.kr/@kd4/3">강관우 (2016, May 07). 프로세스와 스레드의 차이. 개발자 지망생 (Brunch Magazine).</a><br />
+<a href="https://pearlluck.tistory.com/150">godpearl (2020, May 10). 컨텍스트 스위칭 (Context Switching) 개념정리. 그럼에도 불구하고.</a></p>
+</blockquote>
+
+:ET
