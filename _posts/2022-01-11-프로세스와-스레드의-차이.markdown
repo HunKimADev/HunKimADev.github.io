@@ -35,6 +35,8 @@ categories: CS
 - 각 프로세스는 독립적인 주소공간을 할당 받기 때문에 서로의 자원에 직접 접근할 수 없고, 접근하기 위해서는 IPC(inter-process communication)를 사용해야 한다.
 - 프로세스는 최소 1개 이상의 스레드를 가지고 있다. (첫 번째 스레드를 메인스레드라 부른다.)
 
+<br>
+
 ### 스레드
 
 ![스레드](https://sanghun-blog-asset.s3.ap-northeast-2.amazonaws.com/Thread.png)
