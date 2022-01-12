@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-12T18:00:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hoolie’s Tech Blog</title><subtitle>공부하고 까먹지 않기 위해 정리해 나가는 개발 블로그</subtitle><entry><title type="html">프로세스와 스레드의 차이</title><link href="http://localhost:4000/cs/2022/01/11/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4.html" rel="alternate" type="text/html" title="프로세스와 스레드의 차이" /><published>2022-01-11T17:25:53+09:00</published><updated>2022-01-11T17:25:53+09:00</updated><id>http://localhost:4000/cs/2022/01/11/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4</id><content type="html" xml:base="http://localhost:4000/cs/2022/01/11/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4.html"><![CDATA[<p><br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-12T18:13:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hoolie’s Tech Blog</title><subtitle>공부하고 까먹지 않기 위해 정리해 나가는 개발 블로그</subtitle><entry><title type="html">프로세스와 스레드의 차이</title><link href="http://localhost:4000/cs/2022/01/11/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4.html" rel="alternate" type="text/html" title="프로세스와 스레드의 차이" /><published>2022-01-11T17:25:53+09:00</published><updated>2022-01-11T17:25:53+09:00</updated><id>http://localhost:4000/cs/2022/01/11/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4</id><content type="html" xml:base="http://localhost:4000/cs/2022/01/11/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4.html"><![CDATA[<p><br />
 기술면접을 보다보면 열에 아홉은 꼭 나오는 주제들이 있습니다.</p>
 
 <p>이 주제도 그동안 면접을 보면서 직접적으로나 간접적으로 자주 마주친 주제 중 하나입니다.</p>
@@ -33,7 +33,7 @@
 
 <h3 id="프로세스">프로세스</h3>
 
-<p><img src="https://drive.google.com/file/d/1vNJYzkQ9jaJE8ugvbrLuCkCuU-wcYqUJ/view?usp=sharing" alt="프로세스" /></p>
+<p><img src="https://sanghun-blog-asset.s3.ap-northeast-2.amazonaws.com/Process.png" alt="프로세스" /></p>
 
 <ul>
   <li>프로그램이 실행되어 운영체제에게 자원을 할당받은 작업의 단위</li>
@@ -43,7 +43,7 @@
 
 <h3 id="스레드">스레드</h3>
 
-<p><img src="https://drive.google.com/file/d/1VaJ2aHE9koAZYGXNykLqfK1FVru3wTBu/view?usp=sharing" alt="스레드" /></p>
+<p><img src="https://sanghun-blog-asset.s3.ap-northeast-2.amazonaws.com/Thread.png" alt="스레드" /></p>
 
 <ul>
   <li>한 작업(프로세스) 내에서 실행되는 여러 흐름의 단위</li>
