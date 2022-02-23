@@ -21,14 +21,14 @@ categories: Framework
 - 1-2. 프로젝트 구조
 
 
-Client -> Controller -> Service 구간은 ***DTO**객체로 넘겨주며 Service -> Repository(***DAO**) -> DB간에는 Entity(Model)객체로 데이터가 오고간다.
+Client -> Controller -> Service 구간은 1)**Dto**객체로 넘겨주며 Service -> Repository( 2)**DAO** ) -> DB간에는 Entity(Model)객체로 데이터가 오고간다.
 
-##### DTO란?
+##### 1) DTO란?
 Data Transfer Object의 약자이며, API에 대한 요청과 응답을 주고받을 때에 필요한 정보만 담을 수 있도록 만들어진 객체이다.
 
 <br>
 
-##### DAO란?
+##### 2) DAO란?
 Data Access Object의 약자이며, Database의 CRUD를 담당하는 로직이 담긴 객체이다.
 
 <br>
@@ -75,20 +75,20 @@ DDD란 코드를 설계함에 있어서 각 코드의 역할(e.g. Controller, Mo
 
 <br>
 
-여기서 서브도메인의 규모가 더욱 커진다면 Service의 각 기능들을 Usecase로 분리하여 아래와 같이 더욱 세분화 할 수 있습니다.
+여기서 서브도메인의 규모가 더욱 커진다면 **Service**의 각 기능들을 **Usecase**로 분리하여 아래와 같이 더욱 세분화 할 수 있습니다.
 
 ![ddd_detail](https://sanghun-blog-asset.s3.ap-northeast-2.amazonaws.com/spinrg_ddd_detail.png)
 
 - 2-3 더 세분화한 DDD구조
 
 - #### Command: 
-    Repository에서 DB에 쿼리할때 사용하기위한 조건들을 담아놓은 Class. Request Dto를 통해 들어오는 데이터를 Validation하는데 사용된다.
+    **Repository**에서 DB에 쿼리할때 사용하기위한 조건들을 담아놓은 Class. **Request Dto**를 통해 들어오는 데이터를 Validation하는데 사용된다.
 
 - #### Result:
-    마찬가지로 Repository에서 반환하는 결과를 담기위한 Class이다
+    마찬가지로 **Repository**에서 반환하는 결과를 담기위한 Class이다
 
 - #### ***Usecase**:
-    Service를 도메인의 각 기능별로 나눠놓은 Class들이다.
+    **Service**를 도메인의 각 기능별로 나눠놓은 Class들이다.
 
 
 
