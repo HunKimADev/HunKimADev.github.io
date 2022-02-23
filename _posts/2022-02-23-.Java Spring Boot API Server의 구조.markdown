@@ -68,10 +68,10 @@ DDD란 코드를 설계함에 있어서 각 코드의 역할(e.g. Controller, Mo
 2-2. DDD를 적용한 프로젝트 구조
 
 ##### **Application**:
-    **Controller**와 **Dto**등 클라이언트와 직접적으로 통신하는 인터페이스를 포함하는 패키지.
+**Controller**와 **Dto**등 클라이언트와 직접적으로 통신하는 인터페이스를 포함하는 패키지.
 
 ##### **domain**:
-    비즈니스 도메인별로 나누어진, 컨트롤러로부터 호출되어 내부로직을 수행하는 **Service**, **Repository**, **Model**등을 포함하는 패키지
+비즈니스 도메인별로 나누어진, 컨트롤러로부터 호출되어 내부로직을 수행하는 **Service**, **Repository**, **Model**등을 포함하는 패키지
 
 <br>
 
@@ -82,13 +82,13 @@ DDD란 코드를 설계함에 있어서 각 코드의 역할(e.g. Controller, Mo
 2-3. 더 세분화한 DDD구조
 
 ##### **Command**: 
-    **Repository**에서 DB에 쿼리할때 사용하기위한 조건들을 담아놓은 Class. **Request Dto**를 통해 들어오는 데이터를 Validation하는데 사용된다.
+**Repository**에서 DB에 쿼리할때 사용하기위한 조건들을 담아놓은 Class. **Request Dto**를 통해 들어오는 데이터를 Validation하는데 사용된다.
 
 ##### **Result**:
-    마찬가지로 **Repository**에서 반환하는 결과를 담기위한 Class이다
+마찬가지로 **Repository**에서 반환하는 결과를 담기위한 Class이다
 
 ##### ***Usecase**:
-    **Service**를 도메인의 각 기능별로 나눠놓은 Class들이다.
+**Service**를 도메인의 각 기능별로 나눠놓은 Class들이다.
 
 
 
