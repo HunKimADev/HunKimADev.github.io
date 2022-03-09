@@ -18,7 +18,7 @@ API서버를 구축할때에 들어오는 Request의 내용에대해 유효성 �
 ```java
 @NotNull            // Null 허용 안함. "", " " 허용
 @Null	            // Null만 허용
-@NotEmpty	        // Null, "" 허용 안함. " " 허용
+@NotEmpty           // Null, "" 허용 안함. " " 허용
 @NotBlank           // Null, "", " " 모두 허용 안함
 @Size(min=,max=)    // 문자열, 배열 등의 크기가 min 이상 max이하 일때만 허용
 @Pattern(regex=)    // 정규식에 매치될 경우만 허용
