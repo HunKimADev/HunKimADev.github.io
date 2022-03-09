@@ -28,9 +28,9 @@ API서버를 구축할때에 들어오는 Request의 내용에대해 유효성 �
 @FutureOrPresent    // (시간) 현재 또는 미래일 경우만 허용
 @Past	            // (시간) 현재보다 과거일 경우만 허용
 @PastOrPresent      // (시간) 현재 또는 과거일 경우만 허용
-@Positive         // 양수만 허용
+@Positive           // 양수만 허용
 @PositiveOrZero	    // 0 또는 양수만 허용
-@Negative         // 음수만 허용
+@Negative           // 음수만 허용
 @NegativeOrZero	    // 0 또는 음수만 허용
 @Email	            // 이메일 형식만 허용
 @Digits(integer=, fraction = )	// (실수) 최대 integer 정수 자릿수, fraction 소수 자릿수 만큼 허용
